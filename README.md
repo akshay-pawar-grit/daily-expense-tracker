@@ -20,9 +20,22 @@ A simple expense tracking application built with Streamlit. Track your daily exp
 
 1. Clone or download this repository
 
-2. Install dependencies:
+2. Create and activate a virtual environment:
    ```bash
-   pip3 install -r requirements.txt
+   # Create virtual environment
+   python3 -m venv .venv
+
+   # Activate virtual environment
+   # On macOS/Linux:
+   source .venv/bin/activate
+
+   # On Windows:
+   .venv\Scripts\activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
    ```
 
 ## Running the App
@@ -34,6 +47,11 @@ python3 -m streamlit run app.py
 The app will open in your browser at **http://localhost:8501**
 
 To stop the app, press `Ctrl + C` in the terminal.
+
+To deactivate the virtual environment when done:
+```bash
+deactivate
+```
 
 ## Data Storage
 
