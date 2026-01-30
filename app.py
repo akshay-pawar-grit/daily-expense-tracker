@@ -105,7 +105,7 @@ cols = st.sidebar.columns(3)
 for i, cat in enumerate(categories):
     col_idx = i % 3
     with cols[col_idx]:
-        if st.button(cat.split(" ")[0], key=f"cat_{i}", use_container_width=True):
+        if st.button(cat.split(" ")[0], key=f"cat_{i}", width="stretch"):
             st.session_state.selected_category = cat
 
 st.sidebar.markdown(f"**Selected:** {st.session_state.selected_category}")
@@ -159,7 +159,7 @@ with tab1:
         st.subheader("Recent Expenses")
         st.dataframe(
             expenses_df.head(10)[["DATE", "EXPENSE_CATEGORY", "EXPENSE_NAME", "AMOUNT", "COMMENT"]],
-            use_container_width=True,
+            width="stretch",
             hide_index=True
         )
     else:
@@ -199,7 +199,7 @@ with tab2:
 
         st.dataframe(
             filtered_df[["DATE", "EXPENSE_CATEGORY", "EXPENSE_NAME", "AMOUNT", "COMMENT"]],
-            use_container_width=True,
+            width="stretch",
             hide_index=True
         )
 
