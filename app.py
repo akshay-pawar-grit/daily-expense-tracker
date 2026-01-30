@@ -43,7 +43,7 @@ def add_expense(expense_date, category, name, amount, comment):
 
 def get_all_expenses():
     conn = get_connection()
-    df = pd.read_sql_query("SELECT id, DATE, EXPENSE_CATEGORY, EXPENSE_NAME, AMOUNT, COMMENT FROM expenses ORDER BY DATE DESC", conn)
+    df = pd.read_sql_query("SELECT id, DATE, EXPENSE_CATEGORY, EXPENSE_NAME, AMOUNT, COMMENT FROM expenses ORDER BY id DESC", conn)
     conn.close()
     return df
 
