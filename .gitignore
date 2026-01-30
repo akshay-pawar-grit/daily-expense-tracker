@@ -24,6 +24,6 @@ build/
 .DS_Store
 Thumbs.db
 
-# Local data files (uncomment if you don't want to track these)
-# expenses.db
-# daily_expenses.xlsx
+# Local data files
+expenses.db
+daily_expenses.xlsx
